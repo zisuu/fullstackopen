@@ -1,25 +1,27 @@
 import {useState} from 'react'
 
-const Button = (props) => (
-    <button onClick={props.handleClick}>
-        {props.text}
-    </button>
-)
-
-const Display = ({votes}) => <div>{votes}</div>
-
-function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
-}
-
-const points = new Uint8Array(8)
-
-const copy = [...points]
-
-
 const App = () => {
+
+    const Button = (props) => (
+        <button onClick={props.handleClick}>
+            {props.text}
+        </button>
+    )
+
+    const Display = ({votes}) => <div>{votes}</div>
+
+    function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
+    }
+
+    const points = new Uint8Array(8)
+
+    const copy = [...points]
+
+
+
     const anecdotes = [
         'If it hurts, do it more often.',
         'Adding manpower to a late software project makes it later!',
